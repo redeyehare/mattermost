@@ -1,6 +1,9 @@
 // Copyright (c) 2015-present Mattermost, Inc. All Rights Reserved.
 // See LICENSE.txt for license information.
 
+
+//go:build enterprise
+
 package app
 
 import (
@@ -8,7 +11,7 @@ import (
 	"testing"
 
 	"github.com/mattermost/mattermost/server/public/model"
-	"github.com/mattermost/mattermost/server/v8/enterprise/metrics"
+	// "github.com/mattermost/mattermost/server/v8/enterprise/metrics"
 	"github.com/prometheus/client_golang/prometheus"
 	prometheusModels "github.com/prometheus/client_model/go"
 	"github.com/stretchr/testify/require"

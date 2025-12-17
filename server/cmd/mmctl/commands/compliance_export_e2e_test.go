@@ -1,6 +1,9 @@
 // Copyright (c) 2015-present Mattermost, Inc. All Rights Reserved.
 // See LICENSE.txt for license information.
 
+
+//go:build enterprise
+
 package commands
 
 import (
@@ -17,7 +20,7 @@ import (
 	st "github.com/mattermost/mattermost/server/v8/channels/store/storetest"
 	"github.com/mattermost/mattermost/server/v8/cmd/mmctl/client"
 	"github.com/mattermost/mattermost/server/v8/cmd/mmctl/printer"
-	"github.com/mattermost/mattermost/server/v8/enterprise/message_export/shared"
+	// "github.com/mattermost/mattermost/server/v8/enterprise/message_export/shared"
 	"github.com/spf13/cobra"
 )
 
