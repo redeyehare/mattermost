@@ -1,0 +1,21 @@
+cd server && go build -tags netgo -ldflags "-s -w" -o app ./cmd/mattermost
+
+mkdir -p /tmp/config && echo '{"ServiceSettings":{"SiteURL":"http://127.0.0.1:8080","ListenAddress":":8080","LicenseFileLocation":""},"SqlSettings":{"DriverName":"postgres","AtRestEncryptKey":"thissecretkeymustbeatleast32characterslong1234"},"LogSettings":{"EnableConsole":true}}' > /tmp/config/config.json && ./server/app server --config=/tmp/config/config.json
+
+Key (变量名): MM_CONFIG
+Value (变量值): /tmp/config/config.json 
+
+
+MM_SQLSETTINGS_DATASOURCE
+postgres://nyxargmstuzkuumoygvr:ewsxqocyognklmhernmdxbodotetvf@9qasp5v56q8ckkf5dc.leapcellpool.com:6438/nlbjyrcdeuffcaphsuec?sslmode=require
+
+
+MM_LOGSETTINGS_ENABLEFILE
+false
+
+
+
+
+
+mkdir -p /tmp/config && echo '{"ServiceSettings":{"SiteURL":"http://127.0.0.1:8080","ListenAddress":":8080","LicenseFileLocation":""},"SqlSettings":{"DriverName":"postgres","AtRestEncryptKey":"thissecretkeymustbeatleast32characterslong1234"},"LogSettings":{"EnableConsole":true}}' > /tmp/config/config.json && cd server && ./app server --config=/tmp/config/config.json
+
